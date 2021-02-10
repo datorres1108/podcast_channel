@@ -1,0 +1,78 @@
+//Contenedor padre de todo el encabezamiento
+.header{
+   // border: solid black 1px; 
+    padding: 1px;
+    margin: 0.5em;
+    grid-column: 1/5;
+    grid-row: 1/6;
+   
+ }
+    //Contenedor que contiene la barra de navegacion
+    .header-nav
+    {
+       // border: solid black 1px; 
+        padding: 1px;
+        margin: 0.5em;
+    }
+
+    //Contendor que contiene los titulos del encabezamiento del dom
+    .header_textos
+    {
+      //  border: solid black 1px;
+        padding: 1px;
+        margin: 0.5em;
+        
+        h1{
+            font-size: 64px;
+            color: #060A24;
+            letter-spacing: 0;
+            font-family: 'IBM Plex Sans', sans-serif;    
+            
+                .hello{
+                // border: solid red 1px;
+                    width: 152px;
+                    height: 84px;
+                    opacity: 100%;             
+                }      
+                .world{
+                //    border: solid red 1px;
+                    text-decoration: line-through;
+                    width: 179px;
+                    height: 84px;        
+                    opacity: 100%;          
+                }
+            
+                .palet{
+                //    border: solid red 1px;
+                    width: 391px;
+                    height: 84px;        
+                }
+                .color{
+                    color: #0000EC ;
+                }
+        }
+
+        p{
+        //    border: solid red 1px;
+            font-size: 16px;
+            line-height: 24px;
+            width: 628px;
+            height: 48px; 
+            font-family: 'IBM Plex Mono', monospace;
+            line-height: 24px;
+        }
+    }
+//contenedor del boton del encabezamiento    
+.btn{
+    padding: 16px;
+    margin: 1em; 
+    display: inline-block;
+    width: 226px;
+    height: 56px;
+    text-align: center;
+    background: #00F3BB;
+    cursor: pointer;
+    text-decoration: none;
+}
+ 
+
