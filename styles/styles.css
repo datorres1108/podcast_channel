@@ -30,9 +30,6 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
-  grid-row: 1/6;
 }
 
 .header-nav {
@@ -96,6 +93,7 @@
 }
 
 .main {
+  border: solid #eef0e6 2px;
   padding: 1px;
   margin: 0.5em;
   -ms-grid-column: 1;
@@ -112,7 +110,7 @@
   right: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
   background-image: linear-gradient(#0000FF, #0000A3);
   -webkit-transform: skewY(-3deg);
@@ -122,21 +120,10 @@
 }
 
 .main-spoty {
+  border: solid #08f763 3px;
   margin: 1em;
-  padding: 1px;
+  padding: 1em;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .main-spoty h1 {
@@ -148,9 +135,10 @@
 }
 
 .contendor-episodios {
-  width: 100%;
-  height: 500px;
-  margin: 0.5em;
+  border: solid black 2px;
+  width: auto;
+  margin: 1em;
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,53 +146,49 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .spoty1 {
-  background: url(../img/embed1.png);
-  margin: 0.5em;
-  padding: 5px;
+  border: solid black 1px;
+  margin: 1em;
+  padding: 1em;
   width: 584px;
   height: 232px;
 }
 
 .spoty2 {
-  background: url(../img/embed2.png);
-  margin: 0.5em;
-  padding: 5px;
+  border: solid black 1px;
+  margin: 1em;
+  padding: 1em;
   width: 584px;
   height: 232px;
 }
 
 .spoty3 {
-  background: url(../img/embed3.png);
-  margin: 0.5em;
-  padding: 5px;
+  border: solid black 1px;
+  margin: 1em;
+  padding: 1em;
   width: 584px;
   height: 232px;
 }
 
 .spoty4 {
-  background: url(../img/embed4.png);
-  margin: 0.5em;
-  padding: 5px;
+  border: solid black 1px;
+  margin: 1em;
+  padding: 1em;
   width: 584px;
   height: 232px;
 }
 
 .history {
-  border: solid red 1px;
+  border: solid red 3px;
   margin: 1em;
-  padding: 1px;
+  padding: 1em;
   position: relative;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,15 +196,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .img {
-  background: url(../img/phone.png);
-  width: 650px;
-  height: 700px;
+  border: solid #04a04a 3px;
+  margin: 1em;
+  padding: 1em;
+}
+
+.text {
+  border: solid #805ff5 3px;
+  margin: 1em;
+  padding: 1em;
 }
 
 .footer {
