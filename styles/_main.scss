@@ -1,26 +1,23 @@
 //Contenedor padre de todo el principal
 .main{
-    border: solid rgb(238, 240, 230) 2px; 
+  //  border: solid rgb(238, 148, 13) 2px; 
     padding: 1px;
     margin: 0.5em;
     grid-column: 1/5;
     position: relative;
     height:auto; 
-    // display: flex;
-    // flex-direction: column;
-   // overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //overflow: hidden;
  }
     //MA01DI01
    .contenedor-azul {
-   // border: solid red 2px;   
+   //  border: solid red 2px;   
      position: absolute;
-     top: 0;
-     bottom: 0;
-     right: 0;
-     left: 0;
      width: 100%;
      height: 50%;
-     background-image: linear-gradient(#0000FF, #0000A3);
+    background-image: linear-gradient(#0000FF, #0000A3);
      transform: skewY(-3deg);
      transform-origin: top left;
    }
@@ -28,16 +25,13 @@
    //MA01SE01
    .main-spoty
     {
-        border: solid rgb(8, 247, 99) 3px;   
+       // border: solid rgb(8, 247, 99) 3px;   
         margin: 1em;  
         padding: 1em;  
         position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
+        width: 100%; 
         h1{
             color:#FFFFFF;
-            // color: black;
             font-size: 48px;
             width: 209px;
             height: 62px;
@@ -46,56 +40,36 @@
     }
         //SE02DI01
         .contendor-episodios{
-            border: solid black 2px;
-            width: auto; 
-           // position: relative; 
+           // border: solid black 2px;
+            width: auto;
             margin: 1em;  
             padding: 1em;  
             display: flex;
-            flex-direction: row;
             justify-content: space-around;
             flex-wrap: wrap;
+          
             
-
         }
-            //SE02DI01DI0
-            .spoty1{   
-                border: solid black 1px;
-               //background: url(../img/embed1.png);
-                margin: 1em;  
-                padding: 1em;  
-                width: 584px;
-                height: 232px;
+         //SE02DI01DI0
+        .spoty{   
+          //  border: solid black 1px;
+            margin: 1px;  
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 6px;  
+            width: 500px;
+            height: 233px;
+            .reproductor-sppoty{
+                width: 500px;
+                height: 233px;
+            }
+        }
+           
 
-            }
-            .spoty2{
-                border: solid black 1px;
-              //  background: url(../img/embed2.png);
-                margin: 1em;  
-                padding: 1em;  
-                width: 584px;
-                height: 232px;
-            }
-            .spoty3{
-             border: solid black 1px;
-               // background: url(../img/embed3.png);
-                margin: 1em;  
-                padding: 1em;  
-                width: 584px;
-                height: 232px;
-            }
-            .spoty4{
-              border: solid black 1px;
-              //  background: url(../img/embed4.png);
-                margin: 1em;  
-                padding: 1em;  
-                width: 584px;
-                height: 232px;
-            }
 
     //MA01SE02         
     .history{
-        border: solid red 3px;   
+      //  border: solid red 3px;   
         margin: 1em;  
         padding: 1em;  
         position: relative;
@@ -106,17 +80,39 @@
     }
         //MA01SE01DI01
         .img{
-            border: solid rgb(4, 160, 74) 3px; 
+           // border: solid rgb(4, 160, 74) 3px; 
             margin: 1em;  
             padding: 1em;  
-            // background: url(../img/phone.png);
-            // width: 640px;
-            // height: 1038px;
-            // position: relative;
         }
         //MA01SE01DI02
         .text{
-            border: solid rgb(128, 95, 245) 3px;   
+           // border: solid rgb(128, 95, 245) 3px;   
             margin: 1em;
             padding: 1em;  
+            align-self: center;
+
+                h1{
+                    //border: solid red 1px;
+                    margin: 1px;
+                    padding: 1px; 
+                    margin-bottom: 25px;
+                    width: 400px;
+                    height: 52px; 
+                    font-size: 48px;
+                    color: #060A24;
+                    letter-spacing: 0;
+                    font-family: 'IBM Plex Sans', sans-serif;  
+                }
+                p{
+                   // border: solid red 1px;
+                    margin: 1px;
+                    padding: 2px; 
+                    font-size: 16px;
+                    color: #060A24;
+                    line-height: 24px;
+                    width: 468px;
+                    height: 204px; 
+                    font-family: 'IBM Plex Mono', monospace;
+                    line-height: 24px;
+                }
         }

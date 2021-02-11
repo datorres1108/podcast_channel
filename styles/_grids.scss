@@ -2,11 +2,11 @@
    // border: solid red 1px; 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-     width: 100%;
+    // width: 100%;
      //max-width: 1100px;
-     margin: auto;
-     gap: 2px;
-     overflow: hidden; // para que todo lo que este fuera del grid no salga
-     align-items: center;
+    // margin: auto;
+     gap: 1px;
+    // overflow: hidden; // para que todo lo que este fuera del grid no salga
+    // align-items: center;
     
 }

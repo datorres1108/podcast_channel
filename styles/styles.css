@@ -15,13 +15,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-  margin: auto;
-  gap: 2px;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: 1px;
 }
 
 .header {
@@ -35,11 +29,74 @@
 .header-nav {
   padding: 1px;
   margin: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-nav-logo {
+  padding: 3px;
+  margin: 0.5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 36px;
+  height: 36px;
+}
+
+.menu {
+  padding: 1px;
+  margin: 0.5em;
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #060A24;
+  padding: 12px;
+  display: block;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.menu a:hover {
+  border: #F0f0f0 solid 2px;
+  background-color: #0000FF;
+  border-radius: 1em;
+  color: #F0f0f0;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 .header_textos {
   padding: 1px;
   margin: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header_textos h1 {
@@ -93,7 +150,6 @@
 }
 
 .main {
-  border: solid #eef0e6 2px;
   padding: 1px;
   margin: 0.5em;
   -ms-grid-column: 1;
@@ -101,14 +157,19 @@
   grid-column: 1/5;
   position: relative;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contenedor-azul {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   width: 100%;
   height: 50%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
@@ -120,10 +181,10 @@
 }
 
 .main-spoty {
-  border: solid #08f763 3px;
   margin: 1em;
   padding: 1em;
   position: relative;
+  width: 100%;
 }
 
 .main-spoty h1 {
@@ -135,57 +196,33 @@
 }
 
 .contendor-episodios {
-  border: solid black 2px;
   width: auto;
   margin: 1em;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.spoty1 {
-  border: solid black 1px;
-  margin: 1em;
-  padding: 1em;
-  width: 584px;
-  height: 232px;
+.spoty {
+  margin: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 6px;
+  width: 500px;
+  height: 233px;
 }
 
-.spoty2 {
-  border: solid black 1px;
-  margin: 1em;
-  padding: 1em;
-  width: 584px;
-  height: 232px;
-}
-
-.spoty3 {
-  border: solid black 1px;
-  margin: 1em;
-  padding: 1em;
-  width: 584px;
-  height: 232px;
-}
-
-.spoty4 {
-  border: solid black 1px;
-  margin: 1em;
-  padding: 1em;
-  width: 584px;
-  height: 232px;
+.spoty .reproductor-sppoty {
+  width: 500px;
+  height: 233px;
 }
 
 .history {
-  border: solid red 3px;
   margin: 1em;
   padding: 1em;
   position: relative;
@@ -201,15 +238,40 @@
 }
 
 .img {
-  border: solid #04a04a 3px;
   margin: 1em;
   padding: 1em;
 }
 
 .text {
-  border: solid #805ff5 3px;
   margin: 1em;
   padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.text h1 {
+  margin: 1px;
+  padding: 1px;
+  margin-bottom: 25px;
+  width: 400px;
+  height: 52px;
+  font-size: 48px;
+  color: #060A24;
+  letter-spacing: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.text p {
+  margin: 1px;
+  padding: 2px;
+  font-size: 16px;
+  color: #060A24;
+  line-height: 24px;
+  width: 468px;
+  height: 204px;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 24px;
 }
 
 .footer {
