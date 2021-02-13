@@ -1,7 +1,23 @@
 //Contenedor general del pie de pagina
 .footer{
-  //  border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
-    padding: 1px;
-    margin: 0.5em;
+   border: solid rgb(8, 78, 31) 1px; 
+   width:100%;
+   height: 50%;
     grid-column: 1/5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //overflow: hidden;
+}
+
+
+.copy{
+  border: solid red 1px;
+  width: 269px;
+  height: 28px;
+}
+.redes{
+  border: solid red 1px;
+  width: 269px;
+  height: 28px;
 }
