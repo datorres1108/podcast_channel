@@ -18,45 +18,16 @@
   margin: 0.5em;
   grid-column: 1/5; }
 
-.header-nav {
+.logo {
   padding: 1px;
   margin: 0.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-.header-nav-logo {
-  padding: 3px;
-  margin: 0.5em;
-  align-self: center;
   width: 36px;
   height: 36px; }
-
-.menu {
-  padding: 1px;
-  margin: 0.5em;
-  list-style: none; }
-  .menu li {
-    display: inline-block; }
-  .menu a {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    color: #060A24;
-    padding: 12px;
-    display: block;
-    letter-spacing: 0;
-    line-height: 28px; }
-  .menu a:hover {
-    border: #F0f0f0 solid 2px;
-    background-color: #0000FF;
-    border-radius: 1em;
-    color: #F0f0f0;
-    transition: 0s; }
 
 .header_textos {
   padding: 1px;
   margin: 0.5em;
+  margin-top: 146px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,9 +70,105 @@
   cursor: pointer;
   text-decoration: none; }
 
+.btn:hover {
+  clip-path: polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+
+/*menu*/
+header img {
+  float: left; }
+
+header nav {
+  float: right; }
+
+header nav .menu ul {
+  /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
+  width: 100%;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  overflow: hidden;
+  list-style: none;
+  background: #0000EC;
+  height: 0px;
+  transition: height 0.5s ease; }
+
+header nav .menu ul li {
+  position: relative; }
+
+header nav .menu ul li:hover {
+  text-decoration: none; }
+
+header nav .menu ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 16px 5%;
+  line-height: 28px;
+  display: block; }
+
+header nav .activo {
+  color: #060A24;
+  text-decoration: line-through; }
+
+header nav .menu ul li a:hover {
+  color: #00F3BB;
+  text-decoration: line-through; }
+
+/*animación del menu que se desplega*/
+header nav .menu input[type="checkbox"]:checked ~ ul {
+  height: 240px;
+  transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out; }
+
+header nav .menu {
+  padding-top: 3px; }
+
+/*checkbox transparente y en primer plano*/
+header nav .menu input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute; }
+
+/*span -lineas del menu hamburguesa-*/
+header nav .menu span {
+  display: block;
+  width: 25px;
+  height: 2.5px;
+  margin-bottom: 6.5px;
+  position: relative;
+  background: #000;
+  z-index: 1;
+  transform-origin: 3px 0px;
+  transition: transform 0.5s ease, opacity 0.55s ease; }
+
+header nav .menu span:first-child {
+  transform-origin: 0% 0%; }
+
+header nav .menu span:nth-last-child(2) {
+  transform-origin: 0% 100%; }
+
+/*movimiento a cruz*/
+header nav .menu input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(2px, 1px); }
+
+header nav .menu input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+
+header nav .menu input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(1px, 0px); }
+
 .main {
   padding: 1px;
   margin: 0.5em;
+  margin-top: 120px;
   grid-column: 1/5;
   position: relative;
   height: auto;
@@ -114,7 +181,7 @@
   width: 100%;
   height: 30%;
   background-image: linear-gradient(#0000FF, #0000A3);
-  transform: skewY(-3deg);
+  transform: skewY(-6deg);
   transform-origin: top left; }
 
 .main-spoty {
@@ -149,7 +216,6 @@
     height: 233px; }
 
 .history {
-  border: solid red 1px;
   width: 100%;
   margin: 1px;
   padding: 1px;
@@ -159,11 +225,7 @@
   flex-direction: row;
   justify-content: space-around; }
 
-.img {
-  border: solid #04a04a 3px; }
-
 .text {
-  border: solid #805ff5 3px;
   margin: 1px;
   padding: 1px;
   align-self: center; }
@@ -189,7 +251,6 @@
     line-height: 24px; }
 
 .estelares_titulo {
-  border: solid red 1px;
   margin-bottom: 36px;
   margin-left: 200px;
   margin-top: 64px;
@@ -202,7 +263,6 @@
     font-family: 'IBM Plex Sans', sans-serif; }
 
 .estelares {
-  border: solid red 1px;
   width: auto;
   margin: 1px;
   padding: 2px;
@@ -219,21 +279,18 @@
       height: 364px; }
 
 .temas_titulos {
-  border: solid red 2px;
   margin-bottom: 56px;
   margin-left: 150px;
   margin-top: 64px;
   width: 586px;
   height: 62px; }
   .temas_titulos h1 {
-    border: solid chartreuse 1px;
     font-size: 48px;
     color: #060A24;
     letter-spacing: 0;
     font-family: 'IBM Plex Sans', sans-serif; }
 
 .temas {
-  border: solid red 2px;
   width: 100%;
   height: 10%;
   margin-bottom: 34px;
@@ -241,14 +298,12 @@
   justify-content: space-evenly;
   align-items: center; }
   .temas .temas_icons {
-    border: solid red 1px;
     margin: 1px;
     padding: 1px;
     width: 260px;
     height: 130px;
     align-self: center; }
     .temas .temas_icons .temas_icons-img {
-      border: solid #00ff48 1px;
       margin-left: 78px;
       margin-top: 13px;
       margin-right: 78px;
@@ -256,7 +311,6 @@
       width: 104px;
       height: 104px; }
     .temas .temas_icons .temas_icons_text {
-      border: solid #09072b 3px;
       width: 220px;
       height: 32px;
       margin-left: 40px;
@@ -268,54 +322,130 @@
       font-family: 'IBM Plex Sans', sans-serif; }
 
 .novedades {
-  border: solid red 2px;
   width: 100%;
-  height: 20%;
+  height: 16%;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .novedades .novedades_textos {
-    border: solid black 1px;
-    width: 692px;
-    height: 62px;
-    margin-left: 260px;
+
+.contenedor-azul-novedades {
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-image: linear-gradient(#0000FF, #0000A3); }
+  .contenedor-azul-novedades .novedades-text {
+    margin-left: 364px;
+    margin-right: 374px;
     margin-top: 213px;
-    margin-bottom: 243px;
-    position: relative; }
-    .novedades .novedades_textos h1 {
+    width: 692px; }
+    .contenedor-azul-novedades .novedades-text h1 {
       font-size: 48px;
       color: #FFFFFF;
       letter-spacing: 0;
       text-align: center;
       font-family: 'IBM Plex Sans', sans-serif; }
-
-.contenedor-azul-novedades {
-  border: solid black 2px;
-  position: absolute;
-  width: 100%;
-  height: 17%;
-  margin-top: 100px;
-  transform: skewY(-6deg);
-  transform-origin: top left;
-  background-image: linear-gradient(#0000FF, #0000A3); }
+  .contenedor-azul-novedades .btn-escuchar {
+    padding: 16px;
+    margin-left: 548px;
+    margin-right: 548px;
+    margin-top: 36px;
+    display: inline-block;
+    width: 226px;
+    height: 56px;
+    text-align: center;
+    background: #00F3BB;
+    cursor: pointer;
+    text-decoration: none; }
+  .contenedor-azul-novedades .btn-escuchar:hover {
+    clip-path: polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
 
 .footer {
-  border: solid #084e1f 1px;
   width: 100%;
-  height: 50%;
-  grid-column: 1/5;
+  height: 70px;
+  padding: 1px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  justify-content: space-between;
+  align-self: center; }
+  .footer .copy {
+    width: 269px;
+    height: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    color: #060A24;
+    size: 16px;
+    font-family: 'IBM Plex Mono', monospace; }
+  .footer .redes {
+    width: 269px;
+    height: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .footer .redes .redes_img {
+      width: 18px;
+      height: 28px;
+      padding: 1px; }
+      .footer .redes .redes_img .redes-logimg {
+        width: 18px;
+        height: 28px; }
 
-.copy {
-  border: solid red 1px;
-  width: 269px;
-  height: 28px; }
+/*
+Dispositivo Resolución
+Versión de escritorio (base)    940 a 1000 px
+Versión para tabletas   940 a 780 px
+Versión para teléfonos < 780 px
+*/
+/*menu simple con tamaño menor a 1000px*/
+@media screen and (min-width: 1000px) {
+  header nav .menu ul {
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background: unset;
+    height: unset; }
 
-.redes {
-  border: solid red 1px;
-  width: 269px;
-  height: 28px; }
+  header nav .menu ul li {
+    padding: 5px 10px;
+    display: inline-block; }
+
+  header nav .menu ul li:hover {
+    background: unset;
+    border-bottom: 2px solid black; }
+
+  header nav .menu ul li a {
+    padding: unset;
+    line-height: unset;
+    color: #000; }
+
+  header nav .menu ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through; }
+
+  header nav .menu input {
+    display: none; }
+
+  header nav .menu span {
+    display: none; } }
+@media screen and (max-width: 1000px) {
+  .header {
+    border: solid black 2px;
+    padding: 1px;
+    margin: 0.5em;
+    grid-column: 1/3; }
+
+  .hello {
+    border: solid red 1px;
+    width: 50px;
+    height: 84px;
+    opacity: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,63 @@
+/*
+Dispositivo Resolución
+Versión de escritorio (base)    940 a 1000 px
+Versión para tabletas   940 a 780 px
+Versión para teléfonos < 780 px
+*/
+
+/*menu simple con tamaño menor a 1000px*/
+@media screen and (min-width: 1000px){
+    header nav .menu ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background: unset;
+        height: unset;
+    }
+    header nav .menu  ul li {
+        padding: 5px 10px;
+        display: inline-block;
+    } 
+    header nav .menu  ul li:hover {
+        background: unset;
+        border-bottom: 2px solid black;
+    } 
+    header nav .menu ul li a {
+        padding: unset;
+        line-height: unset;
+            color: #000;
+    }
+    header nav .menu  ul li a:hover {
+        color: #00F3BB;
+        text-decoration: line-through;
+
+    } 
+    header nav .menu input {
+        display: none;
+    }
+    header nav .menu span {
+        display: none;
+    }
+}
+
+ //Header textos
+@media screen and (max-width: 1000px){
+  .header{
+    border: solid black 2px; 
+    padding: 1px;
+    margin: 0.5em;
+    grid-column: 1/3;
+ 
+   
+ } 
+
+                    .hello{
+                     border: solid red 1px;
+                    width: 50px;
+                    height: 84px;
+                    opacity: 100%;             
+                } 
+
+
+}

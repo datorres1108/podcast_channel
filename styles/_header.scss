@@ -1,67 +1,28 @@
 //HE01
 .header{
-  //  border: solid black 2px; 
+   // border: solid black 2px; 
     padding: 1px;
     margin: 0.5em;
     grid-column: 1/5;
    
  }
     //HE01NA01
-    .header-nav
+    .logo
     {
-       // border: solid black 1px; 
+       // border: solid red 2px;
         padding: 1px;
         margin: 0.5em;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-        //HE01NA01LO01
-        .header-nav-logo{
-           // border: solid rgba(19, 184, 60, 0.467) 2px;
-            padding: 3px;
-            margin: 0.5em; 
-            align-self: center;
-            width: 36px;
-            height: 36px;
-        }
-        .menu{
-           // border: solid red 2px;
-            padding: 1px;
-            margin: 0.5em; 
-            list-style: none; 
-            li {
-                display: inline-block;
-            }
-            a{
-                font-family: 'IBM Plex Sans', sans-serif; 
-                font-size: 16px;                 
-                text-decoration: none;
-                color: #060A24;
-                padding: 12px;
-                display: block;  
-               // border-radius:1em; 
-                letter-spacing: 0;
-                line-height: 28px;
-            }
-            a:hover{
-                border: #F0f0f0 solid 2px;
-                background-color:#0000FF;
-                border-radius:1em; 
-                color: #F0f0f0;
-                transition: 0s;
-               
-            }
-        }
-
-    //HE01NA01LO01
-
+        width: 36px;
+        height: 36px;
+        
+    } 
     //HE01DI01
     .header_textos
     {
        // border: solid red 2px;
         padding: 1px;
         margin: 0.5em;
+        margin-top: 146px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,5 +83,105 @@
         text-decoration: none;
     
     }
+
+    .btn:hover{
+        clip-path:  polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
+       background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    };
  
 
+/*menu*/
+header img {
+    float: left;
+}
+header nav {
+    float: right;
+}
+header nav .menu ul {
+    /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    background: #0000EC;
+    height: 0px;
+    transition: height 0.5s ease;
+}
+header nav .menu  ul li {
+    position: relative;
+} 
+header nav .menu  ul li:hover {
+     text-decoration: none;
+} 
+header nav .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 16px 5%;
+    line-height: 28px;
+    display: block;
+}
+
+header nav .activo {
+    color: #060A24;
+    text-decoration: line-through;
+}
+
+
+header nav .menu  ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+} 
+/*animación del menu que se desplega*/
+header nav .menu input[type="checkbox"]:checked ~ ul {
+    height: 240px;
+    transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+}
+header nav .menu {
+    padding-top: 3px;
+}
+/*checkbox transparente y en primer plano*/
+header nav .menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+}
+/*span -lineas del menu hamburguesa-*/
+header nav .menu span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin-bottom: 6.5px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.5s ease,
+        opacity 0.55s ease;
+}
+header nav .menu span:first-child {
+    transform-origin: 0% 0%;
+}
+header nav .menu span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+/*movimiento a cruz*/
+header nav .menu input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(2px, 1px);
+}
+header nav .menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+header nav .menu input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
