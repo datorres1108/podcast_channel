@@ -78,35 +78,3 @@
 .header .header-nav .menu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(1px, 0px);
 }
-/*menu simple con tamaño menor a 1000px*/
-@media screen and (min-width: 1000px){
-    .header .header-nav .menu ul {
-        position: relative;
-        top: 0;
-        right: 0;
-        overflow: hidden;
-        background: unset;
-        height: unset;
-    }
-    .header .header-nav .menu  ul li {
-        padding: 5px 10px;
-        display: inline-block;
-    } 
-    .header .header-nav .menu  ul li:hover {
-        background: unset;
-        border-bottom: 2px solid black;
-    } 
-    .header .header-nav .menu ul li a {
-        padding: unset;
-        line-height: unset;
-    }
-    .header .header-nav .menu  ul li a:hover {
-        color: unset;
-    } 
-    .header .header-nav .menu input {
-        display: none;
-    }
-    .header .header-nav .menu span {
-        display: none;
-    }
-}

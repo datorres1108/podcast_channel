@@ -438,8 +438,7 @@ Versión para teléfonos < 780 px
   .header {
     padding: 1px;
     margin: 0.5em;
-    grid-column: 1;
-    width: 360px; }
+    grid-column: 1; }
 
   .logo {
     width: 24px;
@@ -483,10 +482,7 @@ Versión para teléfonos < 780 px
   .main {
     padding: 1px;
     margin-top: 34px;
-    grid-column: 1;
-    width: 360px;
-    display: flex;
-    flex-direction: column; }
+    grid-column: 1; }
 
   .contenedor-azul {
     position: absolute;

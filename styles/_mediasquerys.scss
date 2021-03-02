@@ -46,11 +46,10 @@ Versión para teléfonos < 780 px
 {
     //HEADER ******************************
      .header{
-       // border: solid black 2px; 
+        //border: solid black 2px; 
         padding: 1px;
         margin: 0.5em;
-        grid-column: 1;
-        width: 360px;    
+        grid-column: 1;   
      } 
 
     .logo
@@ -71,8 +70,7 @@ Versión para teléfonos < 780 px
             margin: 2px;
             h1{
                 font-size: 36px;        
-                    .hello{
-                      
+                    .hello{                   
                         width: 85px;
                         height: 42px;            
                     }      
@@ -113,12 +111,12 @@ Versión para teléfonos < 780 px
     //MAIN ***********************
     //MAIN CONTENDOR AZUL Y EPISODIOS SPOTIFY
     .main{
+        //border: solid red 2px;   
         padding: 1px;
         margin-top: 34px;
         grid-column: 1;
-        width: 360px;
-        display: flex;
-        flex-direction: column;
+        //width: 360px;
+
     }
 
    .contenedor-azul {
