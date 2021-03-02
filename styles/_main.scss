@@ -12,7 +12,6 @@
     flex-wrap: wrap;
     //overflow: hidden;
  }
-    //MA01DI01
    .contenedor-azul {
    //  border: solid red 2px;   
      position: absolute;
@@ -23,7 +22,6 @@
      transform-origin: top left;
    }
    
-   //MA01SE01
    .main-spoty
     {
        // border: solid rgb(8, 247, 99) 3px;   
@@ -39,7 +37,6 @@
             font-family: 'IBM Plex Sans', sans-serif; 
         } 
     }
-        //SE02DI01
         .contendor-episodios{
            // border: solid black 2px;
             width: auto;
@@ -51,7 +48,6 @@
           
             
         }
-         //SE02DI01DI0
         .spoty{   
           //  border: solid black 1px;
             margin: 1px;  
@@ -65,12 +61,9 @@
                 height: 233px;
             }
         }
-           
-
-
-    //MA01SE02         
+              
     .history{
-     //   border: solid red 1px;  
+        //border: solid red 1px;  
         width: 100%; 
         margin: 1px;  
         padding: 1px;  
@@ -80,11 +73,6 @@
         flex-direction: row;
         justify-content: space-around;
     }
-        //MA01SE01DI01
-        .img{
-         //  border: solid rgb(4, 160, 74) 3px; 
-        }
-        //MA01SE01DI02
         .text{
            // border: solid rgb(128, 95, 245) 3px;   
             margin: 1px;
@@ -118,7 +106,7 @@
                 }
         }
 .estelares_titulo{
- // border: solid red 1px;
+  //border: solid red 1px;
   margin-bottom: 36px;
   margin-left: 200px;
   margin-top: 64px;
@@ -134,23 +122,22 @@
 }
 }
 .estelares{
-  // border: solid red 1px;
-   width:auto;
+   //border: solid red 1px;
+   width:100%;
    margin: 1px;
    padding: 2px; 
-   margin-bottom: 64px;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
 
    .invitadas{
     //border: solid black 1px;  
-    width: 440px;
+    width: 490px;
     height: 364px;  
     color: rgb(128, 95, 245);
     .img_estelares{
       //border: solid red 1px;
-      width: 440px;
+      width: 490px;
       height:364px;  
 
     }
@@ -266,7 +253,8 @@
     }
     .btn-escuchar:hover{
       clip-path:  polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
-    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+      color: white;
     }
 
 }
