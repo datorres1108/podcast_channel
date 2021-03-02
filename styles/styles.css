@@ -32,26 +32,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .header_textos h1 {
+  .header_textos .content-text h1 {
     font-size: 64px;
     color: #060A24;
     letter-spacing: 0;
     font-family: 'IBM Plex Sans', sans-serif; }
-    .header_textos h1 .hello {
+    .header_textos .content-text h1 .hello {
       width: 152px;
       height: 84px;
       opacity: 100%; }
-    .header_textos h1 .world {
+    .header_textos .content-text h1 .world {
       text-decoration: line-through;
       width: 179px;
       height: 84px;
       opacity: 100%; }
-    .header_textos h1 .palet {
+    .header_textos .content-text h1 .palet {
       width: 391px;
       height: 84px; }
-    .header_textos h1 .color {
+    .header_textos .content-text h1 .color {
       color: #0000EC; }
-  .header_textos p {
+  .header_textos .content-text p {
     font-size: 16px;
     line-height: 24px;
     width: 628px;
@@ -351,7 +351,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
     margin-right: 548px;
     margin-top: 36px;
     display: inline-block;
-    width: 226px;
+    width: 345px;
     height: 56px;
     text-align: center;
     background: #00F3BB;
@@ -418,8 +418,7 @@ Versión para teléfonos < 780 px
     display: inline-block; }
 
   header nav .menu ul li:hover {
-    background: unset;
-    border-bottom: 2px solid black; }
+    background: unset; }
 
   header nav .menu ul li a {
     padding: unset;
@@ -435,17 +434,237 @@ Versión para teléfonos < 780 px
 
   header nav .menu span {
     display: none; } }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .header {
-    border: solid black 2px;
     padding: 1px;
     margin: 0.5em;
-    grid-column: 1/3; }
+    grid-column: 1;
+    width: 360px; }
 
-  .hello {
-    border: solid red 1px;
-    width: 50px;
-    height: 84px;
-    opacity: 100%; } }
+  .logo {
+    width: 24px;
+    height: 24px; }
+
+  .header_textos {
+    padding: 1px;
+    margin: 0.5em;
+    margin-top: 29px; }
+    .header_textos .content-text {
+      padding: 1px;
+      margin: 2px; }
+      .header_textos .content-text h1 {
+        font-size: 36px; }
+        .header_textos .content-text h1 .hello {
+          width: 85px;
+          height: 42px; }
+        .header_textos .content-text h1 .world {
+          width: 102px;
+          height: 42px; }
+        .header_textos .content-text h1 .palet {
+          width: 212px;
+          height: 42px; }
+        .header_textos .content-text h1 .color {
+          color: black; }
+      .header_textos .content-text p {
+        font-size: 14px;
+        line-height: 22px;
+        width: 288px;
+        height: 66px;
+        visibility: hidden; }
+      .header_textos .content-text p:before {
+        content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+        visibility: visible; }
+
+  .btn {
+    margin-top: 36px;
+    width: 288px;
+    height: 48px; }
+
+  .main {
+    padding: 1px;
+    margin-top: 34px;
+    grid-column: 1;
+    width: 360px;
+    display: flex;
+    flex-direction: column; }
+
+  .contenedor-azul {
+    position: absolute;
+    width: 360px;
+    height: 1203.5px;
+    transform: skewY(-7deg);
+    transform-origin: top left; }
+
+  .main-spoty {
+    margin: 1px;
+    padding: 1px;
+    position: relative;
+    width: 360px; }
+    .main-spoty h1 {
+      color: #FFFFFF;
+      font-size: 36px;
+      margin-left: 22px;
+      width: 157px;
+      height: 42px; }
+
+  .contendor-episodios {
+    width: auto;
+    margin-left: 11px;
+    margin-top: 21px;
+    margin-right: 11px;
+    padding: 1px; }
+
+  .spoty {
+    margin-left: 11px;
+    margin-top: 11px;
+    margin-right: 11px;
+    width: 300px;
+    height: 225px; }
+    .spoty .reproductor-sppoty {
+      width: 300px;
+      height: 298px; }
+
+  .history {
+    width: 360px;
+    height: 900px;
+    margin-top: 41px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column; }
+
+  .img-celular {
+    width: 360px;
+    height: 519px; }
+
+  .text {
+    margin: 1px;
+    margin-top: 27px;
+    padding: 1px;
+    align-self: center;
+    width: 360px; }
+    .text h1 {
+      margin: 1px;
+      padding: 1px;
+      margin-left: 16px;
+      width: 288px;
+      height: 84px;
+      font-size: 36px; }
+    .text p {
+      margin: 1px;
+      margin-left: 16px;
+      margin-top: 8px;
+      padding: 2px;
+      font-size: 14px;
+      width: 288px;
+      height: 254px;
+      text-align: justify; }
+
+  .estelares_titulo {
+    margin-left: 11px;
+    margin-top: 54px;
+    width: 288px;
+    height: 84px; }
+    .estelares_titulo h1 {
+      font-size: 36px; }
+
+  .estelares {
+    width: AUTO;
+    display: flex;
+    flex-direction: column; }
+    .estelares .invitadas {
+      width: 350px;
+      height: 243px;
+      color: #805ff5; }
+      .estelares .invitadas .img_estelares {
+        width: 350px;
+        height: 243px; }
+
+  .temas_titulos {
+    margin-left: 11px;
+    margin-top: 28px;
+    margin-bottom: 24px;
+    width: 288px;
+    height: 84px; }
+    .temas_titulos h1 {
+      font-size: 36px; }
+
+  .temas {
+    width: 360px;
+    height: 890px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; }
+    .temas .temas_icons {
+      width: 320px;
+      height: 150px;
+      align-self: center;
+      margin-top: 10px; }
+      .temas .temas_icons .temas_icons-img {
+        margin-left: 108px;
+        margin-top: 13px;
+        margin-right: 108px;
+        width: 104px;
+        height: 104px; }
+      .temas .temas_icons .temas_icons_text {
+        width: 288px;
+        height: 32px;
+        margin-left: 16px;
+        margin-right: 16px; }
+
+  .novedades {
+    width: 360px;
+    height: 341px;
+    margin-top: 5px; }
+
+  .contenedor-azul-novedades {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    width: 360px;
+    height: 341px; }
+    .contenedor-azul-novedades .novedades-text {
+      margin-left: 26px;
+      margin-top: 64px;
+      margin-right: 16px;
+      width: 288px;
+      height: 126px; }
+      .contenedor-azul-novedades .novedades-text h1 {
+        font-size: 36px; }
+    .contenedor-azul-novedades .btn-escuchar {
+      padding: 16px;
+      margin-left: 26px;
+      margin-top: 36px;
+      margin-right: 16px;
+      width: 288px;
+      height: 48px; }
+    .contenedor-azul-novedades .btn-escuchar:hover {
+      clip-path: polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
+      background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+
+  .footer {
+    width: 360px;
+    height: 70px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column; }
+    .footer .copy {
+      margin-left: 47px;
+      margin-top: 24px;
+      margin-right: 46px;
+      line-height: 22px;
+      size: 14px; }
+    .footer .redes {
+      width: 269px;
+      height: 28px;
+      margin-left: 47px;
+      margin-top: 14px;
+      margin-right: 46px;
+      margin-bottom: 25px; }
+      .footer .redes .redes_img {
+        width: 16px;
+        height: 28px;
+        padding: 1px; }
+        .footer .redes .redes_img .redes-logimg {
+          width: 16px;
+          height: 28px; } }
 
 /*# sourceMappingURL=styles.css.map */

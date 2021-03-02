@@ -21,7 +21,7 @@ Versión para teléfonos < 780 px
     } 
     header nav .menu  ul li:hover {
         background: unset;
-        border-bottom: 2px solid black;
+        //border-bottom: 2px solid black;
     } 
     header nav .menu ul li a {
         padding: unset;
@@ -41,23 +41,341 @@ Versión para teléfonos < 780 px
     }
 }
 
- //Header textos
-@media screen and (max-width: 1000px){
-  .header{
-    border: solid black 2px; 
-    padding: 1px;
-    margin: 0.5em;
-    grid-column: 1/3;
- 
-   
- } 
 
+@media screen and (max-width: 700px)
+{
+    //HEADER ******************************
+     .header{
+       // border: solid black 2px; 
+        padding: 1px;
+        margin: 0.5em;
+        grid-column: 1;
+        width: 360px;    
+     } 
+
+    .logo
+    {
+        width: 24px;
+        height: 24px;
+    } 
+
+     .header_textos
+    {     
+        padding: 1px;
+        margin: 0.5em;
+        margin-top: 29px;
+        .content-text
+        {    
+            //border: solid red 2px;
+            padding: 1px;
+            margin: 2px;
+            h1{
+                font-size: 36px;        
                     .hello{
-                     border: solid red 1px;
-                    width: 50px;
-                    height: 84px;
-                    opacity: 100%;             
+                      
+                        width: 85px;
+                        height: 42px;            
+                    }      
+                    .world{
+                        width: 102px;
+                        height: 42px;               
+                    }
+                
+                    .palet{
+                        width: 212px;
+                        height: 42px;        
+                    }
+                    .color{
+                        color: black ;
+                    }
+            }
+
+            p{
+                font-size: 14px;
+                line-height: 22px;
+                width: 288px;
+                height: 66px;  
+                visibility: hidden;
+            }
+            p:before{
+                content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+                visibility:visible; 
+            }
+        }
+    }
+       .btn{
+        margin-top: 36px;
+        width: 288px;
+        height: 48px;
+
+    }
+
+    //MAIN ***********************
+    //MAIN CONTENDOR AZUL Y EPISODIOS SPOTIFY
+    .main{
+        padding: 1px;
+        margin-top: 34px;
+        grid-column: 1;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+    }
+
+   .contenedor-azul {
+    //border: solid red 2px;   
+     position: absolute;
+     width: 360px;
+     height: 1203.5px;
+     transform: skewY(-7deg);
+     transform-origin: top left;
+
+   }
+
+    .main-spoty
+    {
+       //border: solid rgb(8, 247, 99) 3px;   
+        margin: 1px;         
+        padding: 1px;  
+        position: relative;
+        width: 360px;
+        h1{
+            color:#FFFFFF;
+            font-size: 36px;
+             margin-left: 22px; 
+            width: 157px;
+            height: 42px;
+        } 
+    }
+    .contendor-episodios{
+       //border: solid black 2px;
+        width: auto;
+        margin-left: 11px;
+        margin-top: 21px; 
+        margin-right: 11px; 
+        padding: 1px;  
+       
+    }
+    .spoty{   
+        margin-left: 11px;
+        margin-top: 11px;
+        margin-right: 11px; 
+        width: 300px;
+        height: 225px;
+        .reproductor-sppoty{
+            width: 300px;
+            height: 298px;    
+        }
+    }
+
+    //MAIN CONTENEDORES HISTORIA
+    .history{
+        //border: solid red 1px;  
+        width: 360px; 
+        height: 900px;
+        margin-top: 41px;
+        padding: 1px;  
+        display: flex;
+        flex-direction: column;
+    }
+    .img-celular{
+        width: 360px; 
+        height: 519px;
+    }
+
+    .text
+    {
+        //border: solid rgb(128, 95, 245) 3px;   
+        margin: 1px;
+        margin-top: 27px;
+        padding: 1px;  
+        align-self: center;
+        width: 360px;
+
+        h1{
+            //border: solid red 1px;
+            margin: 1px;
+            padding: 1px; 
+            margin-left: 16px;
+            width: 288px;
+            height: 84px; 
+            font-size: 36px;
+        }
+        p{
+            //border: solid red 1px;
+            margin: 1px;
+            margin-left:16px;
+            margin-top:8px;
+            padding: 2px; 
+            font-size: 14px;
+            width: 288px;
+            height: 254px; 
+            text-align: justify;
+        }
+    }
+
+
+    //MAIN CONTENEDORES INVITADAS ESTELARES
+    .estelares_titulo{
+       // border: solid red 1px;
+        margin-left: 11px;
+        margin-top: 54px;
+        width: 288px;
+        height: 84px;  
+        h1{
+            //border: solid red 1px;
+            font-size: 36px;
+        }
+    }
+
+    .estelares{
+        //border: solid red 1px;
+        width:AUTO;
+        display: flex;
+        flex-direction: column;
+
+        .invitadas{
+           // border: solid black 1px;  
+            width: 350px;
+            height: 243px;  
+            color: rgb(128, 95, 245);
+            .img_estelares{
+            //border: solid red 1px;
+            width: 350px;
+            height:243px;  
+            }
+        } 
+    }
+
+    //MAIN CONTENEODORES TEMAS
+        .temas_titulos{
+        //border: solid black 2px;
+        margin-left: 11px;
+        margin-top:28px;
+        margin-bottom: 24px;
+        width: 288px;
+        height: 84px;  
+            h1{
+                //border: solid chartreuse 1px;
+                font-size: 36px;
+            }
+        }
+        .temas
+        {
+            //border: solid red 2px;
+            width:360px;
+            height: 890px;
+            margin-top:10px;
+            display: flex;
+            flex-direction: column;
+
+            .temas_icons
+            {
+               //border: solid #fd8e2f 2px;  
+                width: 320px;
+                height: 150px; 
+                align-self: center; 
+                margin-top: 10px;
+
+                .temas_icons-img{
+                    //border: solid rgb(0, 255, 72) 1px;  
+                    margin-left: 108px;
+                    margin-top: 13px;
+                    margin-right: 108px;
+                    width: 104px;
+                    height: 104px;
                 } 
 
+                .temas_icons_text{
+                   //border: solid rgb(9, 7, 43) 3px;
+                    width: 288px;
+                    height: 32px; 
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
+
+    //MAIN NOVEDADES PIE DE PAGINA
+    .novedades{
+        //border: solid red 2px;
+        width:360px;
+        height: 341px;
+        margin-top:5px;
+    }
+    .contenedor-azul-novedades{
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        width: 360px;
+        height: 341px;
+    
+        .novedades-text{
+           //border: solid rgb(0, 0, 0) 1px; 
+           margin-left: 26px;
+           margin-top: 64px;
+           margin-right: 16px;  
+           width: 288px;
+           height: 126px;
+            h1{
+            font-size: 36px;
+          } 
+        }
+        .btn-escuchar{
+            //border: solid red 2px;
+            padding: 16px;
+            margin-left: 26px;
+            margin-top: 36px;
+            margin-right: 16px;
+            width: 288px;
+            height: 48px;
+        }
+        
+        .btn-escuchar:hover{
+        clip-path:  polygon(88% 0, 100% 50%, 87% 100%, 0% 100%, 11% 50%, 0% 0%);
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        }
+    }
+
+    //DIV FOOTER PIE DE PAGINA
+    .footer{
+        //border: solid red 3px; 
+        width:360px;
+        height: 70px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        .copy
+        {
+        //  border: solid red 1px;
+          margin-left: 47px;
+          margin-top: 24px;
+          margin-right: 46px;
+          line-height: 22px;
+          size: 14px;
+        }
+        .redes
+        {
+         //border: solid red 1px;
+          width: 269px;
+          height: 28px;
+          margin-left: 47px;
+          margin-top: 14px;
+          margin-right: 46px;
+          margin-bottom: 25px;
+          .redes_img
+          {
+            //border: solid black 1px;
+            width: 16px;
+            height: 28px;
+            padding: 1px; 
+           
+            .redes-logimg
+            {
+              width: 16px;
+              height: 28px;
+            }
+          }
+
+        }
+    }
 
 }

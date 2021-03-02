@@ -19,7 +19,7 @@
     //HE01DI01
     .header_textos
     {
-       // border: solid red 2px;
+       
         padding: 1px;
         margin: 0.5em;
         margin-top: 146px;
@@ -28,45 +28,49 @@
         justify-content: center;
         align-items: center;
 
-        h1{
-            font-size: 64px;
-            color: #060A24;
-            letter-spacing: 0;
-            font-family: 'IBM Plex Sans', sans-serif;    
-          
-                .hello{
-                //border: solid red 1px;
-                    width: 152px;
-                    height: 84px;
-                    opacity: 100%;             
-                }      
-                .world{
-                //border: solid red 1px;
-                    text-decoration: line-through;
-                    width: 179px;
-                    height: 84px;        
-                    opacity: 100%;          
-                }
-            
-                .palet{
-                //border: solid red 1px;
-                    width: 391px;
-                    height: 84px;        
-                }
-                .color{
-                    color: #0000EC ;
-                }
-        }
+        .content-text
+        {    
+            //border: solid red 2px;
+            h1{
+                font-size: 64px;
+                color: #060A24;
+                letter-spacing: 0;
+                font-family: 'IBM Plex Sans', sans-serif;    
+              
+                    .hello{
+                    //border: solid red 1px;
+                        width: 152px;
+                        height: 84px;
+                        opacity: 100%;             
+                    }      
+                    .world{
+                    //border: solid red 1px;
+                        text-decoration: line-through;
+                        width: 179px;
+                        height: 84px;        
+                        opacity: 100%;          
+                    }
+                
+                    .palet{
+                    //border: solid red 1px;
+                        width: 391px;
+                        height: 84px;        
+                    }
+                    .color{
+                        color: #0000EC ;
+                    }
+            }
 
-        p{
-            //border: solid red 1px;
-            font-size: 16px;
-            line-height: 24px;
-            width: 628px;
-            height: 48px; 
-            font-family: 'IBM Plex Mono', monospace;
-            line-height: 24px;
-           
+            p{
+                //border: solid red 1px;
+                font-size: 16px;
+                line-height: 24px;
+                width: 628px;
+                height: 48px; 
+                font-family: 'IBM Plex Mono', monospace;
+                line-height: 24px;
+               
+            }
         }
     }
     //HE01DI01DI01DI01   
